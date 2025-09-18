@@ -1,7 +1,7 @@
 {
     "name": "Containerlab",
     "id": "containerlab",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Setup Containerlab in a devcontainer",
     "options": {
         "version": {
