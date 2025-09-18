@@ -1,0 +1,13 @@
+{
+    "name": "Containerlab",
+    "id": "containerlab",
+    "version": "0.1.0",
+    "description": "Setup Containerlab in a devcontainer",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Set the version of containerlab to install. Default: latest"
+        }
+    }
+}

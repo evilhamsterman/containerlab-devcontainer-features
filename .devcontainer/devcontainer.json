@@ -1,0 +1,28 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "containerlab-devcontainer-features",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers-extra/features/go-task:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"json.schemas": [
+					{
+						"fileMatch": [
+							"*/devcontainer-feature.json"
+						],
+						"url": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainerFeature.schema.json"
+					}
+				]
+			},
+			"extensions": [
+				"mads-hartmann.bash-ide-vscode"
+			]
+		}
+	},
+	"updateContentCommand": "npm install -g @devcontainers/cli"
+}
