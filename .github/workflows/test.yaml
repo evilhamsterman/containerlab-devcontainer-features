@@ -16,11 +16,14 @@ jobs:
           - containerlab-dind
           - containerlab-dood
         baseImage:
-          - debian:latest
-          - alpine:latest
+          - debian:trixie
+          - debian:bookworm
           - mcr.microsoft.com/devcontainers/base:ubuntu
     steps:
       - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          cache: npm
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli

@@ -4,8 +4,8 @@ version: "3"
 
 vars:
   IMAGES:
-    - debian:latest
-    - alpine:latest
+    - debian:trixie
+    - debian:bookworm
     - mcr.microsoft.com/devcontainers/base:ubuntu
 
 tasks:
