@@ -17,6 +17,20 @@ Setup Containerlab in a devcontainer
 |-----|-----|-----|-----|
 | version | Set the version of containerlab to install. Default: latest | string | latest |
 
+## Customizations
+
+### VS Code Extensions
+
+- `srl-labs.vscode-containerlab`
+- `redhat.vscode-yaml`
+
+# Containerlab Devcontainer Feature
+
+Installs `containerlab` in a devcontainer.
+
+# Requirements
+
+* Docker: We recommend either the [Docker-in-Docker Feature](https://github.com/devcontainers/features/tree/main/src/docker-in-docker) or the [Docker-outside-of-Docker Feature](https://github.com/devcontainers/features/tree/main/src/docker-outside-of-docker)
 
 
 ---
