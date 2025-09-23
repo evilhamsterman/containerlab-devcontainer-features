@@ -57,6 +57,7 @@ echo "Extracting $FILENAME to $BIN_PATH"
 tar -xzf $FILENAME -C $BIN_PATH containerlab
 
 echo "Configuring sudo-less operation"
+chown root:root "$BIN_PATH/containerlab"
 chmod u+s "$BIN_PATH/containerlab"
 echo "Adding $_REMOTE_USER to clab_admins group"
 if command -v groupadd; then
