@@ -1,13 +1,21 @@
 {
     "name": "Containerlab",
     "id": "containerlab",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Setup Containerlab in a devcontainer",
     "options": {
         "version": {
             "type": "string",
             "default": "latest",
             "description": "Set the version of containerlab to install. Default: latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "srl-labs.vscode-containerlab",
+                "redhat.vscode-yaml"
+            ]
         }
     }
 }

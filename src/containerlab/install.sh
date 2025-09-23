@@ -58,12 +58,15 @@ tar -xzf $FILENAME -C $BIN_PATH containerlab
 
 echo "Configuring sudo-less operation"
 chmod u+s "$BIN_PATH/containerlab"
+echo "Adding $_REMOTE_USER to clab_admins group"
 if command -v groupadd; then
     groupadd -r clab_admins
-    usermod -aG clab_admins "$_CONTAINER_USER"
+    usermod -aG clab_admins "$_REMOTE_USER"
 elif command -v addgroup; then
     addgroup -S clab_admins
-    addgroup "$_CONTAINER_USER" clab_admins
+    addgroup "$_REMOTE_USER" clab_admins
 else
-    echo "Could create clab_admins group"
+    echo "Could not create clab_admins group"
 fi
+
+chmod u+s "$BIN_PATH/containerlab"
